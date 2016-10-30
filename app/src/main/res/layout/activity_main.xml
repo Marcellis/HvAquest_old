@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:background="#f2ffdd"
         android:id="@+id/textView"
-        android:text="Welkom bij de speurtocht van Noah. Volg de pijlen en vind het vraagteken. Heb je een vraagteken gevonden dan mag je op de knop hieronder klikken om de vraag te krijgen."
+        android:text="Volg de pijlen en vind het vraagteken. Heb je een vraagteken gevonden dan mag je op de knop hieronder klikken om de vraag te krijgen."
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />

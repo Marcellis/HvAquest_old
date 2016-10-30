@@ -7,4 +7,11 @@
         <item>Cole</item>
         <item>Het skeletleger</item>
     </string-array>
+    <string name="vraag2">Kai is de drukste ninja, wie is de rustigste?</string>
+    <string-array name="antwoorden2">
+        <item>Zane</item>
+        <item>Kai</item>
+        <item>Jibo</item>
+        <item>Zane</item>
+    </string-array>
 </resources>
