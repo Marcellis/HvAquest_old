@@ -27,11 +27,14 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
 
+
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioGroup"
+        android:orientation="horizontal"
         android:background="#f2ffdd">
+
 
         <RadioButton
             android:text="Antwoord 1"
@@ -51,13 +54,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/radioButton3" />
 
+
 </RadioGroup>
+
+
 </LinearLayout>
 
     <Button
-        android:text="Controleer antwoord"
+        android:text="Ok Ninja, klik hier om te kijken of je antwoord goed is!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="bottom"
         android:id="@+id/buttonAntwoord" />
+
 </LinearLayout>

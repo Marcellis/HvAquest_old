@@ -46,26 +46,22 @@ public class VraagActivity extends AppCompatActivity {
 
         juisteAntwoord = items[0];
 
-
         alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("Antwoord");
-
+        alertDialog.setTitle("Heb je het juist Ninja?");
 
         antwoordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int selectedId=radiogroup.getCheckedRadioButtonId();
                 antwoord = (RadioButton) findViewById(selectedId);
-                if ((antwoord.getText().toString()).equals(juisteAntwoord)) {
-                    alertDialog.setMessage("Antwoord is juist");
-                    alertDialog.show();
+                if (antwoord.getText().equals(juisteAntwoord)) {
+                    alertDialog.setMessage("Goed gedaan Ninja");
                 }
-
                    else {
-                    alertDialog.setMessage("Antwoord is NIET juist");
-                    alertDialog.show();
-                }
+                    alertDialog.setMessage("Nog een keer proberen Ninja");
 
+                }
+                alertDialog.show();
             }
         });
 
