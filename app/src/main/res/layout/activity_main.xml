@@ -11,62 +11,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.marmm.ninjagospeurtocht.MainActivity">
 
+
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/buttonVorige"
-        android:id="@+id/radioGroup"
         android:background="#f2ffdd"
-        android:layout_alignStart="@+id/buttonVorige">
-
-        <RadioButton
-            android:text="RadioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton1" />
-
-        <RadioButton
-            android:text="RadioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton2" />
-
-        <RadioButton
-            android:text="RadioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton3" />
-
-
-    </RadioGroup>
+        android:id="@+id/textView"
+        android:text="Welkom bij de speurtocht van Noah. Volg de pijlen en vind het vraagteken. Heb je een vraagteken gevonden dan mag je op de knop hieronder klikken om de vraag te krijgen."
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Volgende"
-        android:layout_width="wrap_content"
+        android:text="Vraag"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonVolgende"
-        android:layout_marginStart="58dp"
-        android:layout_marginBottom="47dp"
-        android:onClick="onclickVolgende"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/buttonVorige" />
-
-    <Button
-        android:text="Vorige"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:id="@+id/buttonVorige"
-        android:onClick="onclickVorige"
-        android:layout_alignBaseline="@+id/buttonVolgende"
-        android:layout_alignBottom="@+id/buttonVolgende"
-        android:layout_alignParentStart="true" />
-
-
+        android:id="@+id/buttonVraag"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
