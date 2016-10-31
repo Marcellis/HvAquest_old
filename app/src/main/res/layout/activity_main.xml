@@ -17,13 +17,13 @@
         android:layout_height="wrap_content"
         android:background="#f2ffdd"
         android:id="@+id/textView"
-        android:text="Volg de pijlen en vind het vraagteken. Heb je een vraagteken gevonden dan mag je op de knop hieronder klikken om de vraag te krijgen."
+        android:text="Welkom bij de ninja speurtocht. Bij het goed beantwoorden van een vraag krijg je een aanwijzing waar je naar toe moet."
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Vraag"
+        android:text="Start de speurtocht"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

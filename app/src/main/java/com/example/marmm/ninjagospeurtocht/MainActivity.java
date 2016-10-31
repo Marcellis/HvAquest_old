@@ -13,8 +13,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int vraagnummer = 1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, VraagActivity.class);
-                intent.putExtra("vraagnummer", vraagnummer);
-                startActivityForResult(intent,123);
+                //intent.putExtra("vraagnummer", vraagnummer);
+                startActivity(intent);
             }
         });
     }
