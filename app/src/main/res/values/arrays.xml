@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vraag1">Wie volgt de orders van Lord Garmadon op?</string>
+    <string name="vraag1">Wie heeft de vier jonge Ninja's spinjitzu geleerd?</string>
     <string-array name="antwoorden1">
-        <item>Samukai</item>
-        <item>Samukai</item>
-        <item>Cole</item>
-        <item>Het skeletleger</item>
+        <item>Sensei Wu</item>
+        <item>Sensei Wu</item>
+        <item>Lord Garmadon</item>
+        <item>De meester</item>
     </string-array>
-    <string name="vraag2">Kai is de drukste ninja, wie is de rustigste?</string>
+    <string name="vraag2">Wie is de ninja van het vuur?</string>
     <string-array name="antwoorden2">
+        <item>Kai</item>
         <item>Zane</item>
         <item>Kai</item>
-        <item>Jibo</item>
-        <item>Zane</item>
+        <item>Jay</item>
     </string-array>
 </resources>
