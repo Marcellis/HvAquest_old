@@ -13,11 +13,6 @@
     tools:context="com.example.marmm.ninjagospeurtocht.VraagActivity">
 
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_weight="1">
     <TextView
         android:text="Vraag"
         android:layout_width="wrap_content"
@@ -32,7 +27,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioGroup"
-        android:orientation="horizontal"
         android:background="#f2ffdd">
 
 
@@ -58,11 +52,9 @@
 </RadioGroup>
 
 
-</LinearLayout>
-
     <Button
         android:text="Ok Ninja, klik hier om te kijken of je antwoord goed is!"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonAntwoord" />
 

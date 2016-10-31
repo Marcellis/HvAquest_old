@@ -64,8 +64,6 @@ public class VraagActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int selectedId=radiogroup.getCheckedRadioButtonId();
 
-
-
                 {
                     antwoord = (RadioButton) findViewById(selectedId);
                 }
@@ -97,7 +95,6 @@ public class VraagActivity extends AppCompatActivity {
                             dialog.cancel();
                         }
                     });
-
 
                 }
                 alertDialog.show();
