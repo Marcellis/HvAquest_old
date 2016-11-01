@@ -14,4 +14,46 @@
         <item>Kai</item>
         <item>Jay</item>
     </string-array>
+    <string name="vraag3">Wie is de ninja van het water?</string>
+    <string-array name="antwoorden3">
+        <item>Nya</item>
+        <item>Zane</item>
+        <item>Nya</item>
+        <item>Jay</item>
+    </string-array>
+    <string name="vraag4">Wie is de ninja van het bliksem?</string>
+    <string-array name="antwoorden4">
+        <item>Jay</item>
+        <item>Zane</item>
+        <item>Nya</item>
+        <item>Jay</item>
+    </string-array>
+    <string name="vraag5">Wie is de ninja van het aarde?</string>
+    <string-array name="antwoorden5">
+        <item>Cole</item>
+        <item>Cole</item>
+        <item>Nya</item>
+        <item>Kai</item>
+    </string-array>
+    <string name="vraag6">Wie leefde vroeger als houthakker?</string>
+    <string-array name="antwoorden6">
+        <item>Cole</item>
+        <item>Cole</item>
+        <item>Nya</item>
+        <item>Kai</item>
+    </string-array>
+    <string name="vraag7">Wie leerde de ninja's airjitzu?</string>
+    <string-array name="antwoorden7">
+        <item>Meester Yang</item>
+        <item>Meester Yang</item>
+        <item>Lord Garmadon</item>
+        <item>De meester</item>
+    </string-array>
+    <string name="vraag8"> Wie is de dochter van meester Chen? </string>
+    <string-array name="antwoorden8">
+        <item>Skylor</item>
+        <item>Meester Yang</item>
+        <item>Lord Garmadon</item>
+        <item>Skylor</item>
+    </string-array>
 </resources>
