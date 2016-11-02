@@ -16,8 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#f2ffdd"
+        android:text="@string/introtekst"
         android:id="@+id/textView"
-        android:text="Welkom bij de ninja speurtocht. Bij het goed beantwoorden van een vraag krijg je een aanwijzing waar je naar toe moet."
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />

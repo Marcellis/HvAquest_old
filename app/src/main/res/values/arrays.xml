@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vraag1">Wie heeft de vier jonge Ninja's spinjitzu geleerd?</string>
+    <string name="vraag1">Wie heeft de vier jonge Ninja\'s spinjitzu geleerd?</string>
     <string-array name="antwoorden1">
         <item>Sensei Wu</item>
         <item>Sensei Wu</item>
@@ -42,7 +42,7 @@
         <item>Nya</item>
         <item>Kai</item>
     </string-array>
-    <string name="vraag7">Wie leerde de ninja's airjitzu?</string>
+    <string name="vraag7">Wie leerde de ninja\'s airjitzu?</string>
     <string-array name="antwoorden7">
         <item>Meester Yang</item>
         <item>Meester Yang</item>
@@ -51,6 +51,20 @@
     </string-array>
     <string name="vraag8"> Wie is de dochter van meester Chen? </string>
     <string-array name="antwoorden8">
+        <item>Skylor</item>
+        <item>Meester Yang</item>
+        <item>Lord Garmadon</item>
+        <item>Skylor</item>
+    </string-array>
+    <string name="vraag9"> Wie is de dochter van meester Chen? </string>
+    <string-array name="antwoorden9">
+        <item>Skylor</item>
+        <item>Meester Yang</item>
+        <item>Lord Garmadon</item>
+        <item>Skylor</item>
+    </string-array>
+    <string name="vraag10"> Wie is de dochter van meester Chen? </string>
+    <string-array name="antwoorden10">
         <item>Skylor</item>
         <item>Meester Yang</item>
         <item>Lord Garmadon</item>

@@ -30,7 +30,7 @@ public class VraagActivity extends AppCompatActivity {
     RadioButton antwoord3;
     AlertDialog.Builder alertDialog;
     private int vraagnummer = 1;
-    ImageView imageView ;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,21 +38,20 @@ public class VraagActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vraag);
 
         antwoordButton = (Button) findViewById(R.id.buttonAntwoord);
-        vraag = (TextView) findViewById(R.id.textVraag);
-        vraag.setText(getString(R.string.vraag1));
-
-        String antwoorden = "antwoorden"+vraagnummer;
-
-        int holderint = getResources().getIdentifier(antwoorden, "array",
-                this.getPackageName()); // You had used "name"
-         items = getResources().getStringArray(holderint);
-
         imageView = (ImageView) findViewById(R.id.imageView);
         radiogroup = (RadioGroup) findViewById(R.id.radioGroup);
         antwoord1 = (RadioButton) findViewById(R.id.radioButton1);
         antwoord2 = (RadioButton) findViewById(R.id.radioButton2);
         antwoord3 = (RadioButton) findViewById(R.id.radioButton3);
+        vraag = (TextView) findViewById(R.id.textVraag);
 
+        vraag.setText(getString(R.string.vraag1));
+
+        // vullen antwoorden
+        String antwoorden = "antwoorden" + vraagnummer;
+        int holderint = getResources().getIdentifier(antwoorden, "array",
+                this.getPackageName()); // You had used "name"
+        items = getResources().getStringArray(holderint);
         antwoord1.setText(items[1]);
         antwoord2.setText(items[2]);
         antwoord3.setText(items[3]);
@@ -63,54 +62,58 @@ public class VraagActivity extends AppCompatActivity {
         antwoordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int selectedId=radiogroup.getCheckedRadioButtonId();
+                int selectedId = radiogroup.getCheckedRadioButtonId();
 
-                antwoord = (RadioButton) findViewById(selectedId);
+                if (selectedId == -1)
 
-                try {
-                    InputStream stream = getAssets().open("speeltuinkleinedichter.jpg");
-                    Drawable d = Drawable.createFromStream(stream, null);
-                    imageView.setImageDrawable(d);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                    Toast.makeText(VraagActivity.this, "Kies een antwoord Ninja", Toast.LENGTH_SHORT).show();
+
+                else {
+                    antwoord = (RadioButton) findViewById(selectedId);
+
+                    try {
+                        InputStream stream = getAssets().open("speeltuinkleinedichter.jpg");
+                        Drawable d = Drawable.createFromStream(stream, null);
+                        imageView.setImageDrawable(d);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
 
-                Toast.makeText(VraagActivity.this, "test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VraagActivity.this, "test", Toast.LENGTH_SHORT).show();
 
-                if (antwoord.getText().equals(juisteAntwoord)) {
+                    if (antwoord.getText().equals(juisteAntwoord)) {
 
-                    alertDialog = new AlertDialog.Builder(VraagActivity.this);
-                    alertDialog.setMessage("Goed gedaan Ninja, je krijgt een aanwijzing");
+                        alertDialog = new AlertDialog.Builder(VraagActivity.this);
+                        alertDialog.setMessage("Goed gedaan Ninja, je krijgt een aanwijzing");
 
-                    // Setting Positive "Yes" Button
-                    alertDialog.setPositiveButton("Aanwijzing", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
+                        // Setting Positive "Yes" Button
+                        alertDialog.setPositiveButton("Aanwijzing", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
 
-                            try {
-                                InputStream stream = getAssets().open("speeltuinkleinedichter.jpg");
-                                Drawable d = Drawable.createFromStream(stream, null);
-                                imageView.setImageDrawable(d);
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                                try {
+                                    InputStream stream = getAssets().open("speeltuinkleinedichter.jpg");
+                                    Drawable d = Drawable.createFromStream(stream, null);
+                                    imageView.setImageDrawable(d);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+
                             }
+                        });
+                    } else {
 
-                        }
-                    });
+                        alertDialog = new AlertDialog.Builder(VraagActivity.this);
+                        alertDialog.setNegativeButton("Nog een keer proberen Ninja", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                dialog.cancel();
+                            }
+                        });
+
+                    }
+
                 }
-                   else {
-
-                    alertDialog = new AlertDialog.Builder(VraagActivity.this);
-                    alertDialog.setNegativeButton("Nog een keer proberen Ninja", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-
-                            dialog.cancel();
-                        }
-                    });
-
-                }
-
-
             }
         });
 
