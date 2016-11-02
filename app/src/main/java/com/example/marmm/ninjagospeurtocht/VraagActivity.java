@@ -29,8 +29,8 @@ public class VraagActivity extends AppCompatActivity {
     RadioButton antwoord2;
     RadioButton antwoord3;
     AlertDialog.Builder alertDialog;
-    private int vraagnummer = 1;
     ImageView imageView;
+    private int vraagnummer = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,6 @@ public class VraagActivity extends AppCompatActivity {
         antwoord2 = (RadioButton) findViewById(R.id.radioButton2);
         antwoord3 = (RadioButton) findViewById(R.id.radioButton3);
         vraagTextview = (TextView) findViewById(R.id.textVraag);
-
 
         //   vullen vraag
         String vraag = "vraag" + vraagnummer;
@@ -66,63 +65,47 @@ public class VraagActivity extends AppCompatActivity {
         juisteAntwoord = items[0];
 
 
+//        alertDialog = new AlertDialog.Builder(VraagActivity.this);
+//        alertDialog.setMessage("Goed gedaan Ninja, je krijgt een aanwijzing");
+//
+//        // Setting Positive "Yes" Button
+//        alertDialog.setPositiveButton("Aanwijzing", new DialogInterface.OnClickListener() {
+//
+//            public void onClick(DialogInterface dialog, int which) {
+//        }
+//        });
+//        alertDialog.setNegativeButton("Nog een keer proberen Ninja", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//
+//                dialog.cancel();
+//            }
+//        });
+
+
         antwoordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int selectedId = radiogroup.getCheckedRadioButtonId();
 
                 if (selectedId == -1)
-
-                    Toast.makeText(VraagActivity.this, "Kies een antwoord Ninja", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VraagActivity.this, "Kies een antwoord", Toast.LENGTH_SHORT).show();
 
                 else {
                     antwoord = (RadioButton) findViewById(selectedId);
-
-                    try {
-                        InputStream stream = getAssets().open("speeltuinkleinedichter.jpg");
-                        Drawable d = Drawable.createFromStream(stream, null);
-                        imageView.setImageDrawable(d);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
                     if (antwoord.getText().equals(juisteAntwoord)) {
 
-                        alertDialog = new AlertDialog.Builder(VraagActivity.this);
-                        alertDialog.setMessage("Goed gedaan Ninja, je krijgt een aanwijzing");
-
-                        // Setting Positive "Yes" Button
-                        alertDialog.setPositiveButton("Aanwijzing", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                                try {
-                                    InputStream stream = getAssets().open("speeltuinkleinedichter.jpg");
-                                    Drawable d = Drawable.createFromStream(stream, null);
-                                    imageView.setImageDrawable(d);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-
-                            }
-                        });
+                        Intent intent = new Intent(VraagActivity.this, EndActivity.class);
+                        startActivity(intent);
                     } else {
 
-                        alertDialog = new AlertDialog.Builder(VraagActivity.this);
-                        alertDialog.setNegativeButton("Nog een keer proberen Ninja", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                                dialog.cancel();
-                            }
-                        });
-
+                        Toast.makeText(VraagActivity.this, "Nog een keer proberen Ninja!", Toast.LENGTH_SHORT).show();
                     }
 
                 }
+
             }
+
         });
-
-
     }
-
-
 }
+

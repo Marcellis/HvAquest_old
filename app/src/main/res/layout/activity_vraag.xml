@@ -71,7 +71,7 @@
         android:cropToPadding="false" />
 
     <Button
-        android:text="Ok Ninja, klik hier om te kijken of je antwoord goed is!"
+        android:text="Ok Ninja, klik hier om te kijken of je antwoord goed is en je een aanwijzing krijgt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonAntwoord"
