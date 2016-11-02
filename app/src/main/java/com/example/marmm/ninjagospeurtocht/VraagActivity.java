@@ -1,5 +1,6 @@
 package com.example.marmm.ninjagospeurtocht;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -45,6 +46,37 @@ public class VraagActivity extends AppCompatActivity {
         antwoord3 = (RadioButton) findViewById(R.id.radioButton3);
         vraagTextview = (TextView) findViewById(R.id.textVraag);
 
+        vulVraag(1);
+
+        antwoordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int selectedId = radiogroup.getCheckedRadioButtonId();
+
+                if (selectedId == -1)
+                    Toast.makeText(VraagActivity.this, "Kies een antwoord", Toast.LENGTH_SHORT).show();
+
+                else {
+                    antwoord = (RadioButton) findViewById(selectedId);
+                    if (antwoord.getText().equals(juisteAntwoord)) {
+
+                        Intent intent = new Intent(VraagActivity.this, EndActivity.class);
+                        startActivityForResult(intent,1234);
+                    } else {
+
+                        Toast.makeText(VraagActivity.this, "Nog een keer proberen Ninja!", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+
+            }
+
+        });
+    }
+
+
+    public void vulVraag (int vraagnummer){
+
         //   vullen vraag
         String vraag = "vraag" + vraagnummer;
         int holderint1 = getResources().getIdentifier(vraag, "string",
@@ -61,51 +93,18 @@ public class VraagActivity extends AppCompatActivity {
         antwoord1.setText(items[1]);
         antwoord2.setText(items[2]);
         antwoord3.setText(items[3]);
-
         juisteAntwoord = items[0];
+    }
 
 
-//        alertDialog = new AlertDialog.Builder(VraagActivity.this);
-//        alertDialog.setMessage("Goed gedaan Ninja, je krijgt een aanwijzing");
-//
-//        // Setting Positive "Yes" Button
-//        alertDialog.setPositiveButton("Aanwijzing", new DialogInterface.OnClickListener() {
-//
-//            public void onClick(DialogInterface dialog, int which) {
-//        }
-//        });
-//        alertDialog.setNegativeButton("Nog een keer proberen Ninja", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//
-//                dialog.cancel();
-//            }
-//        });
-
-
-        antwoordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int selectedId = radiogroup.getCheckedRadioButtonId();
-
-                if (selectedId == -1)
-                    Toast.makeText(VraagActivity.this, "Kies een antwoord", Toast.LENGTH_SHORT).show();
-
-                else {
-                    antwoord = (RadioButton) findViewById(selectedId);
-                    if (antwoord.getText().equals(juisteAntwoord)) {
-
-                        Intent intent = new Intent(VraagActivity.this, EndActivity.class);
-                        startActivity(intent);
-                    } else {
-
-                        Toast.makeText(VraagActivity.this, "Nog een keer proberen Ninja!", Toast.LENGTH_SHORT).show();
-                    }
-
-                }
-
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //Check if the result code is the right one
+        if (resultCode == Activity.RESULT_OK) {
+            //Check if the request code is correct
+            if (requestCode == 1234) {
+                vulVraag (2);
             }
+        }
 
-        });
     }
 }
-

@@ -18,12 +18,14 @@
         android:background="#f2ffdd"
         android:text="@string/introtekst"
         android:id="@+id/textView"
+        android:textSize="25sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Start de speurtocht"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
