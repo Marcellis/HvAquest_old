@@ -22,7 +22,7 @@ public class VraagActivity extends AppCompatActivity {
     RadioGroup radiogroup;
     Button antwoordButton;
     String[] items;
-    TextView vraag;
+    TextView vraagTextview;
     String juisteAntwoord;
     RadioButton antwoord;
     RadioButton antwoord1;
@@ -43,9 +43,16 @@ public class VraagActivity extends AppCompatActivity {
         antwoord1 = (RadioButton) findViewById(R.id.radioButton1);
         antwoord2 = (RadioButton) findViewById(R.id.radioButton2);
         antwoord3 = (RadioButton) findViewById(R.id.radioButton3);
-        vraag = (TextView) findViewById(R.id.textVraag);
+        vraagTextview = (TextView) findViewById(R.id.textVraag);
 
-        vraag.setText(getString(R.string.vraag1));
+
+        //   vullen vraag
+        String vraag = "vraag" + vraagnummer;
+        int holderint1 = getResources().getIdentifier(vraag, "string",
+                this.getPackageName()); // You had used "name"
+        String vraagScherm = getResources().getString(holderint1);
+
+        vraagTextview.setText(vraagScherm);
 
         // vullen antwoorden
         String antwoorden = "antwoorden" + vraagnummer;
@@ -78,9 +85,6 @@ public class VraagActivity extends AppCompatActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-
-                    Toast.makeText(VraagActivity.this, "test", Toast.LENGTH_SHORT).show();
 
                     if (antwoord.getText().equals(juisteAntwoord)) {
 
