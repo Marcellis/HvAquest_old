@@ -29,9 +29,9 @@ public class VraagActivity extends AppCompatActivity {
     RadioButton antwoord1;
     RadioButton antwoord2;
     RadioButton antwoord3;
-    AlertDialog.Builder alertDialog;
     ImageView imageView;
     private int vraagnummer = 1;
+    public static final String vraagKey = "vraagKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class VraagActivity extends AppCompatActivity {
         antwoord3 = (RadioButton) findViewById(R.id.radioButton3);
         vraagTextview = (TextView) findViewById(R.id.textVraag);
 
-        vulVraag(1);
+        vulVraag(vraagnummer);
 
         antwoordButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,10 +61,9 @@ public class VraagActivity extends AppCompatActivity {
                     if (antwoord.getText().equals(juisteAntwoord)) {
 
                         Intent intent = new Intent(VraagActivity.this, EndActivity.class);
-                        intent.putExtra("vraagnummer", vraagnummer);
+                        intent.putExtra(vraagKey,vraagnummer);
                         startActivityForResult(intent,1234);
                     } else {
-
                         Toast.makeText(VraagActivity.this, "Nog een keer proberen Ninja!", Toast.LENGTH_SHORT).show();
                     }
 
@@ -103,7 +102,10 @@ public class VraagActivity extends AppCompatActivity {
         if (resultCode == Activity.RESULT_OK) {
             //Check if the request code is correct
             if (requestCode == 1234) {
-                vulVraag (2);
+                vraagnummer = data.getIntExtra(EndActivity.aanwijzingKey,-1);
+                 vulVraag (vraagnummer);
+
+
             }
         }
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,13 +18,14 @@ public class EndActivity extends AppCompatActivity {
     private int currentImageIndex = 0;
     private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank,R.drawable.speeltuinkleinedichter};
     private int aanwijzing;
+    public static final String aanwijzingKey = "aanwijzingKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
-        final int aanwijzing = getIntent().getIntExtra("vraagnummer",-1);
+        aanwijzing = getIntent().getIntExtra(VraagActivity.vraagKey,-1);
 
         ImageView imageView = (ImageView) findViewById(R.id.imageViewAanwijzing);
         Button terugButton = (Button) findViewById(R.id.buttonAanwijzing);
@@ -34,7 +36,8 @@ public class EndActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent data = new Intent();
-               data.putExtra("vraagnummer",aanwijzing++);
+               data.putExtra(aanwijzingKey, ++aanwijzing);
+
                 //Send the result back to the activity
                 setResult(Activity.RESULT_OK, data);
                 finish();
