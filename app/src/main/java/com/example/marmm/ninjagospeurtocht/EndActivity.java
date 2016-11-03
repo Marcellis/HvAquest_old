@@ -15,17 +15,19 @@ import java.io.InputStream;
 public class EndActivity extends AppCompatActivity {
 
     private int currentImageIndex = 0;
-    private int[] imageNames = {R.drawable.speeltuinkleinedichter};
+    private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank,R.drawable.speeltuinkleinedichter};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
+        int aanwijzing = getIntent().getIntExtra("vraagnummer",-1);
+
         ImageView imageView = (ImageView) findViewById(R.id.imageViewAanwijzing);
         Button terugButton = (Button) findViewById(R.id.buttonAanwijzing);
 
-        imageView.setImageResource(imageNames[currentImageIndex]);
+        imageView.setImageResource(imageNames[aanwijzing]);
 
         terugButton.setOnClickListener(new View.OnClickListener() {
             @Override

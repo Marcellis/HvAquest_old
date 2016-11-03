@@ -61,6 +61,7 @@ public class VraagActivity extends AppCompatActivity {
                     if (antwoord.getText().equals(juisteAntwoord)) {
 
                         Intent intent = new Intent(VraagActivity.this, EndActivity.class);
+                        intent.putExtra("vraagnummer", vraagnummer);
                         startActivityForResult(intent,1234);
                     } else {
 
