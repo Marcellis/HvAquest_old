@@ -3,6 +3,7 @@ package com.example.marmm.ninjagospeurtocht;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +17,7 @@ import java.io.InputStream;
 public class EndActivity extends AppCompatActivity {
 
     private int currentImageIndex = 0;
-    private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank,R.drawable.stadhuis, R.drawable.bioscoop, R.drawable.tandarts,R.drawable.schip, R.drawable.boog, R.drawable.speeltuinkleinedichter};
+    private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank, R.drawable.stadhuis, R.drawable.bioscoop, R.drawable.tandarts, R.drawable.haven,R.drawable.schip, R.drawable.boog, R.drawable.speeltuinkleinedichter,  R.drawable.kapper, R.drawable.speeltuinachter};
     private int aanwijzing;
     public static final String aanwijzingKey = "aanwijzingKey";
 
@@ -25,7 +26,7 @@ public class EndActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
-        aanwijzing = getIntent().getIntExtra(VraagActivity.vraagKey,-1);
+        aanwijzing = getIntent().getIntExtra(VraagActivity.vraagKey, -1);
 
         ImageView imageView = (ImageView) findViewById(R.id.imageViewAanwijzing);
         Button terugButton = (Button) findViewById(R.id.buttonAanwijzing);
@@ -35,12 +36,18 @@ public class EndActivity extends AppCompatActivity {
         terugButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent data = new Intent();
-               data.putExtra(aanwijzingKey, ++aanwijzing);
 
-                //Send the result back to the activity
-                setResult(Activity.RESULT_OK, data);
-                finish();
+                if (aanwijzing == 10) {
+                    Intent data = new Intent(EndActivity.this, EindeActivity.class);
+                    startActivity(data);
+                } else {
+                    Intent data = new Intent();
+                    data.putExtra(aanwijzingKey, ++aanwijzing);
+
+                    //Send the result back to the activity
+                    setResult(Activity.RESULT_OK, data);
+                    finish();
+                }
             }
         });
     }

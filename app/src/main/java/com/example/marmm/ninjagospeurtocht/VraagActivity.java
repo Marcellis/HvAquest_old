@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,7 +55,8 @@ public class VraagActivity extends AppCompatActivity {
                 int selectedId = radiogroup.getCheckedRadioButtonId();
 
                 if (selectedId == -1)
-                    Toast.makeText(VraagActivity.this, "Kies een antwoord", Toast.LENGTH_SHORT).show();
+                    Snackbar.make(view, "Kies een antwoord", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+
 
                 else {
                     antwoord = (RadioButton) findViewById(selectedId);
@@ -64,7 +66,8 @@ public class VraagActivity extends AppCompatActivity {
                         intent.putExtra(vraagKey,vraagnummer);
                         startActivityForResult(intent,1234);
                     } else {
-                        Toast.makeText(VraagActivity.this, "Nog een keer proberen Ninja!", Toast.LENGTH_SHORT).show();
+                        Snackbar.make(view, "Nog een keer proberen Ninja", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+
                     }
 
                 }
@@ -104,6 +107,7 @@ public class VraagActivity extends AppCompatActivity {
             if (requestCode == 1234) {
                 vraagnummer = data.getIntExtra(EndActivity.aanwijzingKey,-1);
                  vulVraag (vraagnummer);
+                radiogroup.clearCheck();
 
 
             }
