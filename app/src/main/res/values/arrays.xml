@@ -56,18 +56,18 @@
         <item>Lord Garmadon</item>
         <item>Skylor</item>
     </string-array>
-    <string name="vraag9"> Wie is de dochter van meester Chen? </string>
+    <string name="vraag9"> Wie is de baas van de ninja\'s </string>
     <string-array name="antwoorden9">
-        <item>Skylor</item>
-        <item>Meester Yang</item>
+        <item>Sensei Wu</item>
+        <item>Sensei Wu</item>
         <item>Lord Garmadon</item>
-        <item>Skylor</item>
+        <item>De meester</item>
     </string-array>
-    <string name="vraag10"> Wie is de dochter van meester Chen? </string>
+    <string name="vraag10"> Welke ninja bestond als eerste? </string>
     <string-array name="antwoorden10">
-        <item>Skylor</item>
+        <item>Sensei Wu</item>
         <item>Meester Yang</item>
         <item>Lord Garmadon</item>
-        <item>Skylor</item>
+        <item>Sensei Wu</item>
     </string-array>
 </resources>

@@ -16,7 +16,7 @@ import java.io.InputStream;
 public class EndActivity extends AppCompatActivity {
 
     private int currentImageIndex = 0;
-    private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank,R.drawable.speeltuinkleinedichter};
+    private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank,R.drawable.stadhuis, R.drawable.bioscoop, R.drawable.tandarts,R.drawable.schip, R.drawable.boog, R.drawable.speeltuinkleinedichter};
     private int aanwijzing;
     public static final String aanwijzingKey = "aanwijzingKey";
 
