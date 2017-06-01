@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Ninjago Speurtocht - Noah\'s 7de verjaardag</string>
-    <string name="introtekst">Welkom bij de ninja speurtocht. Sensei Wu heeft een echte spannende Ninja spel verstopt in Utrecht. Deze speurtocht leidt je daar naar
-        toe maar je moet daarvoor alle vragen goed beantwoorden en de aanwijzingen volgen.
+    <string name="app_name">Ninjago </string>
+    <string name="introtekst">Welcome to the Ninja Quest.
+
+         Sensei Wu is hidden away somewhere in Utrecht. This quest will lead you to him but first you need to answer the questions correctly and follow the instructions.
+
     </string>
 </resources>
