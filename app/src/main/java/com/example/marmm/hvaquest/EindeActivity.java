@@ -1,4 +1,4 @@
-package com.example.marmm.ninjagospeurtocht;
+package com.example.marmm.hvaquest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

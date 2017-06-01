@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.marmm.ninjagospeurtocht.EndActivity">
+    tools:context="com.example.marmm.hvaquest.EndActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -23,6 +23,6 @@
         android:layout_alignBottom="@id/imageViewAanwijzing"
         android:layout_alignParentBottom="true"
         android:textSize="25sp"
-        android:text="Als je hier bent mag je hier klikken voor de volgende vraag."
+        android:text="Click here for the next question."
         android:id="@+id/buttonAanwijzing" />
 </RelativeLayout>

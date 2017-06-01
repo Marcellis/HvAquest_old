@@ -1,4 +1,4 @@
-package com.example.marmm.ninjagospeurtocht;
+package com.example.marmm.hvaquest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

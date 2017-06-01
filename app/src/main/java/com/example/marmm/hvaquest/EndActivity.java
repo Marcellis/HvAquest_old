@@ -1,18 +1,12 @@
-package com.example.marmm.ninjagospeurtocht;
+package com.example.marmm.hvaquest;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class EndActivity extends AppCompatActivity {
 

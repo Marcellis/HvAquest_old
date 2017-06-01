@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vraag1">Wie heeft de vier jonge Ninja\'s spinjitzu geleerd?</string>
+    <string name="vraag1">Who taught the four young spinjitzu?</string>
     <string-array name="antwoorden1">
         <item>Sensei Wu</item>
         <item>Sensei Wu</item>
