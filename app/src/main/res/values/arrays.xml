@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vraag1">Who taught the four young spinjitzu?</string>
-    <string-array name="antwoorden1">
-        <item>Sensei Wu</item>
-        <item>Sensei Wu</item>
-        <item>Lord Garmadon</item>
-        <item>De meester</item>
+    <string name="question1">Who is the co-founder of Android?</string>
+    <string-array name="answer1">
+        <item>Andy Rubin</item>
+        <item>Andy Rubin</item>
+        <item>Larry Page &amp; Sergey Brin</item>
+        <item>Sundar Pichai</item>
     </string-array>
-    <string name="vraag2">Wie is de ninja van het vuur?</string>
-    <string-array name="antwoorden2">
-        <item>Kai</item>
-        <item>Zane</item>
-        <item>Kai</item>
-        <item>Jay</item>
+    <string name="question2">In which language is Android written?</string>
+    <string-array name="answer2">
+        <item>Java</item>
+        <item>Java</item>
+        <item>Ruby</item>
+        <item>JavaScript</item>
     </string-array>
-    <string name="vraag3">Wie is de ninja van het water?</string>
-    <string-array name="antwoorden3">
-        <item>Nya</item>
-        <item>Zane</item>
-        <item>Nya</item>
-        <item>Jay</item>
+    <string name="question3">Which method gets called after onCreate in the Activity-lifecycle?</string>
+    <string-array name="answer3">
+        <item>onStart</item>
+        <item>onCreateView</item>
+        <item>onStart</item>
+        <item>onResume</item>
     </string-array>
-    <string name="vraag4">Wie is de ninja van het bliksem?</string>
-    <string-array name="antwoorden4">
-        <item>Jay</item>
-        <item>Zane</item>
-        <item>Nya</item>
-        <item>Jay</item>
+    <string name="question4">In what year did google announce Material Design?</string>
+    <string-array name="answer4">
+        <item>2014</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
     </string-array>
-    <string name="vraag5">Wie is de ninja van het aarde?</string>
-    <string-array name="antwoorden5">
-        <item>Cole</item>
-        <item>Cole</item>
-        <item>Nya</item>
-        <item>Kai</item>
+    <string name="question5">What is the code name of version 1.6?</string>
+    <string-array name="answer5">
+        <item>Donut</item>
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
     </string-array>
-    <string name="vraag6">Wie leefde vroeger als houthakker?</string>
-    <string-array name="antwoorden6">
-        <item>Cole</item>
-        <item>Cole</item>
-        <item>Nya</item>
-        <item>Kai</item>
+    <string name="question6">Which version of Android did not run on phones?</string>
+    <string-array name="answer6">
+        <item>Android 3.0</item>
+        <item>Android 1.0</item>
+        <item>Android 2.0</item>
+        <item>Android 3.0</item>
     </string-array>
-    <string name="vraag7">Wie leerde de ninja\'s airjitzu?</string>
-    <string-array name="antwoorden7">
-        <item>Meester Yang</item>
-        <item>Meester Yang</item>
-        <item>Lord Garmadon</item>
-        <item>De meester</item>
+    <string name="question7">When did Google announced Android Wear?</string>
+    <string-array name="answer7">
+        <item>2014</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
     </string-array>
-    <string name="vraag8"> Wie is de dochter van meester Chen? </string>
-    <string-array name="antwoorden8">
-        <item>Skylor</item>
-        <item>Meester Yang</item>
-        <item>Lord Garmadon</item>
-        <item>Skylor</item>
+    <string name="question8">Who build the first smartwatch?</string>
+    <string-array name="answer8">
+        <item>Sony, 2010</item>
+        <item>Sony, 2010</item>
+        <item>Samsung, 2012</item>
+        <item>LG, 2014</item>
     </string-array>
-    <string name="vraag9"> Wie is de baas van de ninja\'s </string>
-    <string-array name="antwoorden9">
-        <item>Sensei Wu</item>
-        <item>Sensei Wu</item>
-        <item>Lord Garmadon</item>
-        <item>De meester</item>
+    <string name="question9">For what for OS was Android originally created?</string>
+    <string-array name="answer9">
+        <item>Digital cameras</item>
+        <item>Desktop computers</item>
+        <item>Digital cameras</item>
+        <item>Smartphones</item>
     </string-array>
-    <string name="vraag10"> Welke ninja bestond als eerste? </string>
-    <string-array name="antwoorden10">
-        <item>Sensei Wu</item>
-        <item>Meester Yang</item>
-        <item>Lord Garmadon</item>
-        <item>Sensei Wu</item>
+    <string name="question10">Who is the CEO of Android?</string>
+    <string-array name="answer10">
+        <item>Sundar Pichai</item>
+        <item>Andy Rubin</item>
+        <item>Larry Page &amp; Sergey Brin</item>
+        <item>Sundar Pichai</item>
     </string-array>
 </resources>

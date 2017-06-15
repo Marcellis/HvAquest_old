@@ -8,17 +8,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/lloyd"
-    tools:context="com.example.marmm.hvaquest.EindeActivity">
+    android:background="@drawable/android_nougat"
+    tools:context="com.example.marmm.hvaquest.FinishedActivity">
 
     <TextView
-        android:text="Je hebt het einde gehaald en het spel verdiend!!!!"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="47dp"
-        android:textSize="20sp"
-        android:id="@+id/textView2" />
+        android:layout_marginTop="169dp"
+        android:text="@string/end_text"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 </RelativeLayout>

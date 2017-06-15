@@ -11,32 +11,42 @@ import android.widget.ImageView;
 public class EndActivity extends AppCompatActivity {
 
     private int currentImageIndex = 0;
-    private int[] imageNames = {R.drawable.lloyd, R.drawable.rabobank, R.drawable.stadhuis, R.drawable.bioscoop, R.drawable.tandarts, R.drawable.haven,R.drawable.schip, R.drawable.boog, R.drawable.speeltuinkleinedichter,  R.drawable.kapper, R.drawable.speeltuinachter};
-    private int aanwijzing;
-    public static final String aanwijzingKey = "aanwijzingKey";
+    private int[] imageNames = {R.drawable.nicolaes_tulphuis,
+            R.drawable.fraijlemaborg,
+            R.drawable.leeuwenburg,
+            R.drawable.muller_lulofshuis,
+            R.drawable.wibauthuis,
+            R.drawable.studio_hva,
+            R.drawable.theo_thijssenhuis,
+            R.drawable.kohnstammhuis,
+            R.drawable.benno_premselahuis,
+            R.drawable.koetsier_montaignehuis,
+            R.drawable.maagdenhuis};
+    private int clue;
+    public static final String clueKey = "clueKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
-        aanwijzing = getIntent().getIntExtra(VraagActivity.vraagKey, -1);
+        clue = getIntent().getIntExtra(QuestionActivity.questionKey, -1);
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageViewAanwijzing);
-        Button terugButton = (Button) findViewById(R.id.buttonAanwijzing);
+        ImageView imageView = (ImageView) findViewById(R.id.imageViewClue);
+        Button backButton = (Button) findViewById(R.id.buttonClue);
 
-        imageView.setImageResource(imageNames[aanwijzing]);
+        imageView.setImageResource(imageNames[clue]);
 
-        terugButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (aanwijzing == 10) {
-                    Intent data = new Intent(EndActivity.this, EindeActivity.class);
+                if (clue == 10) {
+                    Intent data = new Intent(EndActivity.this, FinishedActivity.class);
                     startActivity(data);
                 } else {
                     Intent data = new Intent();
-                    data.putExtra(aanwijzingKey, ++aanwijzing);
+                    data.putExtra(clueKey, ++clue);
 
                     //Send the result back to the activity
                     setResult(Activity.RESULT_OK, data);

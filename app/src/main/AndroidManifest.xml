@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.marmm.hvaquest.VraagActivity" />
+        <activity android:name="com.example.marmm.hvaquest.QuestionActivity" />
         <activity android:name="com.example.marmm.hvaquest.EndActivity" />
-        <activity android:name="com.example.marmm.hvaquest.EindeActivity"></activity>
+        <activity android:name="com.example.marmm.hvaquest.FinishedActivity"></activity>
     </application>
 
 </manifest>

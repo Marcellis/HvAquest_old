@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Quest HvA </string>
-    <string name="introtekst">Welcome to the Ninja Quest.
+    <string name="introtekst">Welcome to the Android Quest.
 
-         Sensei Wu is hidden away somewhere in Utrecht. This quest will lead you to him but first you need to answer the questions correctly and follow the instructions.
+         <!--Sensei Wu is hidden away somewhere in Utrecht. This quest will lead you to him but first you need to answer the questions correctly and follow the instructions.-->
 
     </string>
+    <string name="start_quest">Start the Quest</string>
+    <string name="choose_answer">Choose an answer</string>
+    <string name="try_again">Try again!</string>
+    <string name="verify_button_text">Click here to see if your answer is correct and get your next clue</string>
+    <string name="end_text">You have reached the end and earned the game !!!!</string>
 </resources>
