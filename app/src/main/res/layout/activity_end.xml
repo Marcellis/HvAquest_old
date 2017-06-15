@@ -12,17 +12,17 @@
     tools:context="com.example.marmm.hvaquest.EndActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageViewAanwijzing"
+        android:layout_width="420dp"
+        android:layout_height="420dp"
+        android:id="@+id/imageViewClue"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/imageViewAanwijzing"
+        android:layout_alignBottom="@id/imageViewClue"
         android:layout_alignParentBottom="true"
         android:textSize="25sp"
         android:text="Click here for the next question."
-        android:id="@+id/buttonAanwijzing" />
+        android:id="@+id/buttonClue" />
 </RelativeLayout>

@@ -3,11 +3,11 @@ package com.example.marmm.hvaquest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class EindeActivity extends AppCompatActivity {
+public class FinishedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_einde);
+        setContentView(R.layout.activity_finished);
     }
 }
