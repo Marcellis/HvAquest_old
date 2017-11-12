@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.marmm.hvaquest.QuestionActivity" />
-        <activity android:name="com.example.marmm.hvaquest.EndActivity" />
+        <activity android:name="com.example.marmm.hvaquest.LocationActivity" />
         <activity android:name="com.example.marmm.hvaquest.FinishedActivity"></activity>
     </application>
 

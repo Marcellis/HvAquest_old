@@ -55,7 +55,7 @@ public class QuestionActivity extends AppCompatActivity {
                     answer = (RadioButton) findViewById(selectedId);
                     if (answer.getText().equals(correctAnswer)) {
 
-                        Intent intent = new Intent(QuestionActivity.this, EndActivity.class);
+                        Intent intent = new Intent(QuestionActivity.this, LocationActivity.class);
                         intent.putExtra(questionKey, questionNumber);
                         startActivityForResult(intent,1234);
                     } else {
@@ -98,7 +98,7 @@ public class QuestionActivity extends AppCompatActivity {
         if (resultCode == Activity.RESULT_OK) {
             //Check if the request code is correct
             if (requestCode == 1234) {
-                questionNumber = data.getIntExtra(EndActivity.clueKey,-1);
+                questionNumber = data.getIntExtra(LocationActivity.clueKey,-1);
                 populateQuestion(questionNumber);
                 radioGroup.clearCheck();
 

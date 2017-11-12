@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class EndActivity extends AppCompatActivity {
+public class LocationActivity extends AppCompatActivity {
 
     private int currentImageIndex = 0;
     private int[] imageNames = {R.drawable.nicolaes_tulphuis,
@@ -28,7 +28,7 @@ public class EndActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_end);
+        setContentView(R.layout.activity_location);
 
         clue = getIntent().getIntExtra(QuestionActivity.questionKey, -1);
 
@@ -42,7 +42,7 @@ public class EndActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (clue == 10) {
-                    Intent data = new Intent(EndActivity.this, FinishedActivity.class);
+                    Intent data = new Intent(LocationActivity.this, FinishedActivity.class);
                     startActivity(data);
                 } else {
                     Intent data = new Intent();
